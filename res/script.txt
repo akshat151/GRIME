@@ -1,0 +1,67 @@
+load snow.ppm snow
+
+brighten 150 snow snow-brightened
+brighten -150 snow snow-darkened
+vertical-flip snow snow-vertical
+horizontal-flip snow snow-horizontal
+
+greyscale red-component snow snow-greyscale-red
+greyscale green-component snow snow-greyscale-green
+greyscale blue-component snow snow-greyscale-blue
+greyscale intensity-component snow snow-greyscale-intensity
+greyscale value-component snow snow-greyscale-value
+greyscale luma-component snow snow-greyscale-luma
+
+
+rgb-split snow snow-R snow-G snow-B
+brighten 150 snow-R snow-R-bright
+rgb-combine snow-combine snow-R-bright snow-G snow-B
+sharpen snow snow-sharp
+blur snow snow-blur
+transformation sepia snow snow-sepia-trans
+transformation greyscale snow snow-greyscale-trans
+dither snow snow-dither
+
+save grey-red-component.ppm snow-greyscale-red
+save grey-blue-component.ppm snow-greyscale-blue
+save grey-green-component.ppm snow-greyscale-green
+save grey-value-component.ppm snow-greyscale-value
+save grey-intensity-component.ppm snow-greyscale-intensity
+save grey-luma-component.ppm snow-greyscale-luma
+save snow-greyscale-value.ppm snow-greyscale-value
+save snow-brightened.ppm snow-brightened
+save snow-darkened.ppm snow-darkened
+save snow-vertical.ppm snow-vertical
+save snow-horizontal.ppm snow-horizontal
+save snow-R.ppm snow-R
+save snow-G.ppm snow-G
+save snow-B.ppm snow-B
+save snow-combine.ppm snow-combine
+
+
+save snow-sharp.ppm snow-sharp
+save snow-blur.ppm snow-blur
+save snow-sepia-trans.ppm snow-sepia-trans
+save snow-greyscale-trans.ppm snow-greyscale-trans
+save snow-dither.ppm snow-dither
+
+
+save snow-sharp-png.png snow-sharp
+save snow-blur-png.png snow-blur
+save snow-sepia-trans-png.png snow-sepia-trans
+save snow-greyscale-trans-png.png snow-greyscale-trans
+save snow-dither-png.png snow-dither
+
+
+save snow-sharp-jpg.jpg snow-sharp
+save snow-blur-jpg.jpg snow-blur
+save snow-sepia-trans-jpg.jpg snow-sepia-trans
+save snow-greyscale-trans-jpg.jpg snow-greyscale-trans
+save snow-dither-jpg.jpg snow-dither
+
+
+save snow-sharp-bmp.bmp snow-sharp
+save snow-blur-bmp.bmp snow-blur
+save snow-sepia-trans-bmp.bmp snow-sepia-trans
+save snow-greyscale-trans-bmp.bmp snow-greyscale-trans
+save snow-dither-bmp.bmp snow-dither
